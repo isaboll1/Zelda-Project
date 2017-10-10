@@ -4,6 +4,7 @@ The controls for this are as follows
 
 Keyboard Button "A" can spawn Links
 Keyboard Button "1" can change the link that is being controlled
+Keyboard Button "F11" can be used to take a screenshot
 
 For a controller....
 
