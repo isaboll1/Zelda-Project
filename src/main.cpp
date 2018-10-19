@@ -8,11 +8,9 @@
 //DEFINES__________________________________________________________________
 #define MAX_CONTROLLERS 4
 
-#ifdef __WINDOWS__
-const char* pathsep = "\\";
-#else
+
 const char* pathsep = "/";
-#endif
+
 
 using namespace std;
 //________________________GLOBAL VARIABLES AND STRUCTURES____________________
@@ -92,8 +90,8 @@ int main(int argc, char ** argv) {
 			string arg = argv[i];
 			if (arg == "-fs") {
 				Fullscreen = true;
-			}	
-		}	
+			}
+		}
 	}
 
 	//Creating a window and renderer
@@ -384,7 +382,7 @@ int main(int argc, char ** argv) {
 				if (event.key.keysym.scancode == SDL_SCANCODE_F12) {
 					if (Fullscreen == false) {
 						Fullscreen = true; SDL_GetWindowSize(window, &event.window.data1, &event.window.data2); }
-					else if (Fullscreen == true) { 
+					else if (Fullscreen == true) {
 						Fullscreen = false; SDL_GetWindowSize(window, &event.window.data1, &event.window.data2); }
 				}
 				if (event.key.keysym.scancode == SDL_SCANCODE_F11) {
@@ -430,5 +428,3 @@ int main(int argc, char ** argv) {
 
 	return 0;
 }
-
-
