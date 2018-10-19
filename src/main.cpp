@@ -8,9 +8,7 @@
 //DEFINES__________________________________________________________________
 #define MAX_CONTROLLERS 4
 
-
 const char* pathsep = "/";
-
 
 using namespace std;
 //________________________GLOBAL VARIABLES AND STRUCTURES____________________
@@ -24,6 +22,7 @@ string res_path;
 int Link_Num;
 bool running = true;
 double DT = 0.0;
+
 
 //__________________________FUNCTIONS_____________________________________
 
@@ -152,7 +151,7 @@ int main(int argc, char ** argv) {
 			Attacking = false;
 			Weapon = 1;
 			A_Rate = 0;
-			path = GetFileFromPath("Resources", "Link.tsf");
+			path = GetFileFromPath("Resources", "Link.bmp");
 			image = SDL_LoadBMP(path.c_str());
 			if (image) {
 				texture = SDL_CreateTextureFromSurface(renderer, image);
@@ -241,7 +240,7 @@ int main(int argc, char ** argv) {
 		string path;
 	public:
 		Background() {
-			path = GetFileFromPath("Resources", "Terrain.tsf");
+			path = GetFileFromPath("Resources", "Terrain.bmp");
 			image = SDL_LoadBMP(path.c_str());
 			if (image) {
 				texture = SDL_CreateTextureFromSurface(renderer, image);
