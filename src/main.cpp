@@ -23,7 +23,6 @@ int Link_Num;
 bool running = true;
 double DT = 0.0;
 
-
 //__________________________FUNCTIONS_____________________________________
 
 void ScreenPresent() {
